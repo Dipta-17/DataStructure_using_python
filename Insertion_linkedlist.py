@@ -5,6 +5,8 @@ class Node:
 class linkedlist:
   def __init__(self):
     self.start=None
+
+  # insert at bigining
   def insertatbegining(self,v):
     n=Node(v)
     if self.start==None:
@@ -13,6 +15,7 @@ class linkedlist:
        n.next=self.start
        self.start=n 
 
+  # insert at middle
   def insertatmiddle(self,v,item):
     n=Node(v)
     if self.start==None:
@@ -24,6 +27,7 @@ class linkedlist:
       n.next=temp.next 
       temp.next=n 
 
+# insert at end
   def insertatend(self,v):
     n=Node(v)
     if self.start==None:
@@ -34,11 +38,11 @@ class linkedlist:
         temp=temp.next
       temp.next=n
         
-
+  # Display code
   def display(self):
     a=self.start
     while a:
-      print(a.info)
+      print(a.info, end="-->")
       a=a.next
     print("None")  
 
